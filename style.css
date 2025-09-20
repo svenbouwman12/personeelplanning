@@ -1,0 +1,380 @@
+/* Reset en basisstijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Login pagina */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.login-form {
+    background: white;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    color: #667eea;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.demo-accounts {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+}
+
+.demo-accounts h3 {
+    margin-bottom: 1rem;
+}
+
+.demo-accounts p {
+    margin-bottom: 0.5rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: #667eea;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Main content */
+.main-content {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Sections */
+.schedule-section,
+.employees-section,
+.clock-section,
+.my-schedule-section,
+.clock-history-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.schedule-section h2,
+.employees-section h2,
+.clock-section h2,
+.my-schedule-section h2,
+.clock-history-section h2 {
+    margin-bottom: 1.5rem;
+    color: #667eea;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+/* Schedule controls */
+.schedule-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.schedule-controls label {
+    font-weight: 600;
+}
+
+.schedule-controls input[type="week"] {
+    padding: 0.5rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Tables */
+.schedule-table-container,
+.my-schedule-table-container,
+.history-table-container {
+    overflow-x: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.schedule-table,
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.schedule-table th,
+.schedule-table td,
+.history-table th,
+.history-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table th,
+.history-table th {
+    background: #667eea;
+    color: white;
+    font-weight: 600;
+}
+
+.schedule-table tr:hover,
+.history-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Employee select dropdown */
+.employee-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background: white;
+}
+
+.employee-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Clock section */
+.clock-controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.clock-status {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #667eea;
+}
+
+.clock-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Employees list */
+.employees-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.employee-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    text-align: center;
+}
+
+.employee-card h3 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.employee-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Error message */
+.error-message {
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .clock-controls {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .clock-buttons {
+        justify-content: center;
+    }
+    
+    .schedule-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .login-container h1 {
+        font-size: 2rem;
+    }
+    
+    .login-form {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-table th,
+    .schedule-table td,
+    .history-table th,
+    .history-table td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

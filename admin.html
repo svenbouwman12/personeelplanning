@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personeelsplanner - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Admin Dashboard</h1>
+            <div class="user-info">
+                <span id="currentUser"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Uitloggen</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="schedule-section">
+                <h2>Weekrooster</h2>
+                <div class="schedule-controls">
+                    <label for="weekSelect">Week selecteren:</label>
+                    <input type="week" id="weekSelect" value="">
+                    <button id="saveSchedule" class="btn btn-primary">Rooster opslaan</button>
+                </div>
+                
+                <div class="schedule-table-container">
+                    <table id="scheduleTable" class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Tijd</th>
+                                <th>Maandag</th>
+                                <th>Dinsdag</th>
+                                <th>Woensdag</th>
+                                <th>Donderdag</th>
+                                <th>Vrijdag</th>
+                                <th>Zaterdag</th>
+                                <th>Zondag</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleBody">
+                            <!-- Dynamisch gegenereerd door JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="employees-section">
+                <h2>Werknemers</h2>
+                <div class="employees-list">
+                    <div class="employee-card">
+                        <h3>Sven</h3>
+                        <p>Werknemer</p>
+                    </div>
+                    <div class="employee-card">
+                        <h3>Anna</h3>
+                        <p>Werknemer</p>
+                    </div>
+                    <div class="employee-card">
+                        <h3>Tom</h3>
+                        <p>Werknemer</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

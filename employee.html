@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personeelsplanner - Werknemer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Mijn Rooster</h1>
+            <div class="user-info">
+                <span id="currentUser"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Uitloggen</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="clock-section">
+                <h2>Inklokken/Uitklokken</h2>
+                <div class="clock-controls">
+                    <div class="clock-status">
+                        <p>Status: <span id="clockStatus">Uitgeklokt</span></p>
+                        <p>Laatste actie: <span id="lastClockTime">-</span></p>
+                    </div>
+                    <div class="clock-buttons">
+                        <button id="clockInBtn" class="btn btn-success">Inklokken</button>
+                        <button id="clockOutBtn" class="btn btn-danger" disabled>Uitklokken</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-schedule-section">
+                <h2>Mijn Diensten</h2>
+                <div class="schedule-controls">
+                    <label for="weekSelect">Week selecteren:</label>
+                    <input type="week" id="weekSelect" value="">
+                </div>
+                
+                <div class="my-schedule-table-container">
+                    <table id="myScheduleTable" class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Dag</th>
+                                <th>Dienst</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myScheduleBody">
+                            <!-- Dynamisch gegenereerd door JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="clock-history-section">
+                <h2>Inklok Geschiedenis</h2>
+                <div class="history-table-container">
+                    <table id="clockHistoryTable" class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Datum</th>
+                                <th>Inklok</th>
+                                <th>Uitklok</th>
+                                <th>Uren</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clockHistoryBody">
+                            <!-- Dynamisch gegenereerd door JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
